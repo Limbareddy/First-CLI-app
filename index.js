@@ -2,9 +2,9 @@ var read = require("readline-sync");
 var score = 0;
 var username = read.question(" Hey whats your name ")
 console.log("hii  " + username + " Do You know Limbareddy")
-console.log("Type answers in small letters")
+// console.log("Type answers in small letters")
 function display(question, answer) {
-  var useranswer = read.question(question);
+  var useranswer = read.question(question).toLowerCase();
   if (useranswer == answer) {
     console.log(" you are right")
     score = score + 1;
@@ -14,12 +14,14 @@ function display(question, answer) {
   console.log("---------")
 }
 
-var questions = [{question: "Do you know me ",
+var questions = [{
+  question: "Do you know me ",
   answer: "yes",
 },
 {
   question: "Which is my favorite Application? ",
-  answer: "twitter",},{
+  answer: "twitter",
+}, {
   question: "Which is my favorite place",
   answer: "home",
 },
@@ -28,7 +30,7 @@ var questions = [{question: "Do you know me ",
   answer: "limbareddy",
 }, {
   question: "Which is my favorite dish? \n 1.veg \n 2.non veg \n 3.both ",
-  answer: "both",
+  answer: "3",
 }]
 for (i = 0; i < questions.length; i++) {
   var user = questions[i];
@@ -37,4 +39,4 @@ for (i = 0; i < questions.length; i++) {
 console.log("Your Final score  is ->: ", score)
 console.log("High Scores So Far");
 console.log("Sumanth ", 5);
-console.log("Nachi",4);
+console.log("Nachi", 4);
