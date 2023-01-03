@@ -37,6 +37,18 @@ for (i = 0; i < questions.length; i++) {
   display(user.question, user.answer)
 }
 console.log("Your Final score  is ->: ", score)
-console.log("High Scores So Far");
-console.log("Sumanth ", 5);
-console.log("Nachi", 4);
+
+var highscores = [
+  {
+    name: "Sumanth ", score: "2",
+  },
+  {
+    name: "Nachi ", score: "3"
+  }
+]
+for(i=0;i<highscores.length;i++){
+  if(score> highscores[i].score){
+    console.log(" You have beaten " +highscores[i].name+ " send me a screen shot to upload score")
+  }
+}
+
